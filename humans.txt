@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Tom de Bruin – https://twitter.com/deadlyhifi
+
+# THANKS
+
+    Sam Holman - https://twitter.com/samh
+    Ryan Marshall - https://twitter.com/rsmarshall
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
