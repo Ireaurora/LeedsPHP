@@ -1,0 +1,35 @@
+# Site settings
+title: LeedsPHP – A PHP user group in Leeds, UK.
+description: "A minimal blog template, build with Jekyll."
+url: "http://www.jacoporabolini.com/emerald"
+author:
+  name: "Jacopo Rabolini"
+  email: "hello@jacoporabolini.com"
+  url: "http://www.jacoporabolini.com"
+
+# Build settings
+baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title/
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 8
+paginate_path: "/archive/page/:num"
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Custom variables
+google_analytics: UA-70481443-1
+
+# Options
+reverse: false

@@ -1,30 +1,15 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Leeds PHP – Meetup for PHP developers in Leeds, UK</title>
-        <meta name="description" content="The Leeds PHP User Group meets regularly for presentations, demos, and discussions on PHP and reated web technologies.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: default
+---
+<!-- Posts -->
+<ul id="posts">
 
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <div class="wrapstar">
-            <img src="img/logo-leedsphp.png" width="1330" height="600" title="Leeds PHP" />
-        </div>
+	{% assign post = site.posts.first %}
+	{% assign content = post.content %}
+	  <li class="post">
+	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
+	  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+	  	<p>{{ post.content }}</p>
+	  </li>
 
-        <h1>The next meetup is on Thursday 17th of March</h1>
-        <p>At <a href="https://www.theadelphileeds.co.uk/">the Adelphi</a>.</p>
-        <p>Join <a href="http://www.meetup.com/leedsphp/">www.meetup.com/leedsphp</a> to stay informed.</p>
-
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-70481443-1','auto');ga('send','pageview');
-        </script>
-    </body>
-</html>
+</ul>
