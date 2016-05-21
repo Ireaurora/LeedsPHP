@@ -22,4 +22,4 @@ LeedsPHP is dedicated to providing harassment-free meet up experiences for every
 
 ## Getting Involved
 
-If you would like to be involved in the organising of the event please get in touch via [twitter](http://twitter.com/leedsphp).
+If you would like to be involved in the organising of the event please get in touch via [twitter](http://twitter.com/leedsphp) or email [tom@leedsphp.org](tom@leedsphp.org).
