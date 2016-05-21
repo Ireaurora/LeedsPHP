@@ -1,30 +1,41 @@
 /*- Custom style -*/
-
 ul.sponsor {
     li {
         display: inline-block;
     }
-
     a {
         display: block;
     }
-
     img {
         display: inline;
         vertical-align: middle;
         margin: 5px;
-
     }
 }
-
 .credits {
     font-size: 0.8em;
     margin-top: 10px;
-
     a {
         color: white;
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+button {
+    border: none;
+    padding: 0;
+    background: none;
+    a {
+        color: white;
+        font-weight: normal;
+        font-size: 1.5em;
+        padding: 0.2em 0.5em;
+        border-radius: 5px;
+        background-color: lighten($main-color, 20%);
+        &:hover {
+            color: white;
+            background-color: $main-color;
         }
     }
 }
