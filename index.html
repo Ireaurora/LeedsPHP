@@ -1,11 +1,9 @@
 ---
 layout: default
 ---
-<ul id="posts">
-	{% assign post = site.posts.first %}
-	{% assign content = post.content %}
-	<li class="post">
-		<h2>★ The Next Event: <a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
-		<p>{{ post.content }}</p>
-	</li>
-</ul>
+<article id="page">
+    {% assign post = site.posts.first %}
+    {% assign content = post.content %}
+    <h2>★ The Next Event: <a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
+    {{ post.content }}
+</article>
