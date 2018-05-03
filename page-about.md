@@ -4,6 +4,7 @@ title: About Us
 permalink: /about/
 slug: about
 ---
+
 LeedsPHP is a non-profit group to discuss and share knowledge about PHP and related web technologies. We meet monthly (probably) and enjoy a few talks from locals or people who have traveled further afield.
 
 It's open to any skill level from beginners to experts alike and we try to vary the levels so as to not alienate anyone.
@@ -22,4 +23,4 @@ LeedsPHP is dedicated to providing harassment-free meet up experiences for every
 
 ## Getting Involved
 
-If you would like to be involved in the organising of the event please get in touch via [twitter](http://twitter.com/leedsphp) or email [tom@leedsphp.org](tom@leedsphp.org).
+If you would like to be involved in the organising of the event please get in touch via [twitter](http://twitter.com/leedsphp) or email [info@leedsphp.org](info@leedsphp.org).
