@@ -15,7 +15,7 @@ The meet-ups aren't open to recruiters unless you're just popping along in a lea
 
 Our long term sponsors can be seen in the footer of this page. Additional meet-up specific sponsors will be detailed on the individual event pages.
 
-If you would like to provide further sponsorship, long term, or for a particular events get in touch via [twitter](http://twitter.com/leedsphp).
+If you would like to provide further sponsorship, long term, or for a particular events get in touch via [twitter](https://twitter.com/leedsphp).
 
 ## Code of Conduct
 
