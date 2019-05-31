@@ -21,6 +21,16 @@ If you would like to provide further sponsorship, long term, or for a particular
 
 LeedsPHP is dedicated to providing harassment-free meet up experiences for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of participants in any form. Sexual language and imagery is not appropriate for any meet up venue or online discussion. LeedsPHP members violating these rules may be sanctioned or expelled from the group at the discretion of the group's organisers.
 
+## Organisers
+
+### Hugh Noble
+
+Hugh is the lead organiser for Leeds PHP and is a fulltime software engineer.
+
+### Tom Wade
+
+Tom has been a PHP developer for over 10 years and worked at a number of digital agenies in Leeds. He works fulltime as a software engineer at Midnite, an esports betting startup, and runs the betting comparison platform [SickOdds](https://sickodds.com/).
+
 ## Getting Involved
 
 If you would like to be involved in the organising of the event please get in touch via [twitter](http://twitter.com/leedsphp) or email [info@leedsphp.org](info@leedsphp.org).
