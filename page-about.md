@@ -31,6 +31,10 @@ Hugh is the lead organiser for Leeds PHP and is a fulltime software engineer.
 
 Tom has been a PHP developer for over 10 years and worked at a number of digital agenies in Leeds. He works fulltime as a software engineer at Midnite, an esports betting startup, and runs the betting comparison platform [SickOdds](https://sickodds.com/).
 
+### Mark Taylor
+
+Over far to many years, Mark has done a mix of development (particularly PHP), devops, database administration and technical architecture. He currently works for [DealTrak](https://www.dealtrak.co.uk/) as their Lead Architect.
+
 ## Getting Involved
 
 If you would like to be involved in the organising of the event please get in touch via [twitter](http://twitter.com/leedsphp) or email [info@leedsphp.org](info@leedsphp.org).
