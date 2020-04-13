@@ -12,8 +12,8 @@ locals or people who have traveled further afield.
 It's open to any skill level from beginners to experts alike and we try to vary
 the levels so as to not alienate anyone.
 
-The meet-ups aren't open to recruiters unless you're just popping along in a
-learning capacity.
+The meet-ups and online platforms aren't open to recruiters unless you're just
+participating in a learning capacity.
 
 ## Sponsorship
 
@@ -29,9 +29,10 @@ LeedsPHP is dedicated to providing harassment-free meet up experiences for
 everyone, regardless of gender, sexual orientation, disability, physical
 appearance, body size, race, or religion. We do not tolerate harassment of
 participants in any form. Sexual language and imagery is not appropriate for any
-meet up venue or online discussion. LeedsPHP members violating these rules may
-be sanctioned or expelled from the group at the discretion of the group's
-organisers.
+meet up venue or online discussion. 
+
+LeedsPHP members violating these rules may be sanctioned or expelled from the
+group at the discretion of the group's organisers.
 
 ## Organisers
 
