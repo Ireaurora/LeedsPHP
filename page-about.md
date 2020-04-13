@@ -37,7 +37,9 @@ organisers.
 
 ### Hugh Noble
 
-Hugh is the lead organiser for Leeds PHP and is a fulltime software engineer.
+Hugh is a software engineer, primarily with experience in PHP and Java. He has
+shared talks on Git, effective team working, and Object Oriented Programming. He
+currently works at [BJSS](https://www.bjss.com/). 
 
 ### Mark Taylor
 
