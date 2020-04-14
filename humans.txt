@@ -3,12 +3,14 @@
 
 # TEAM
 
-    Tom de Bruin – https://twitter.com/deadlyhifi
+    Hugh Noble – https://twitter.com/hughnoble
+    Mark Taylor - https://twitter.com/willCodeForAle
 
 # THANKS
 
     Sam Holman - https://twitter.com/samh
     Ryan Marshall - https://twitter.com/rsmarshall
+    Tom de Bruin – https://twitter.com/deadlyhifi
 
 # TECHNOLOGY COLOPHON
 
