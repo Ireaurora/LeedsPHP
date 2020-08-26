@@ -7,4 +7,5 @@ group :development do
   gem 'sass', '~> 3.4.10'
   gem 'jekyll', '~> 3.0'
   gem 'jekyll-paginate', '~> 1.1'
+  gem 'kramdown-parser-gfm'
 end
