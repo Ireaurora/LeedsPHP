@@ -36,20 +36,10 @@ group at the discretion of the group's organisers.
 
 ## Organisers
 
-### Hugh Noble
-
-Hugh is a software engineer, primarily with experience in PHP and Java. He has
-shared talks on Git, effective team working, and Object Oriented Programming. He
-currently works at [BJSS](https://www.bjss.com/). 
-
-### Mark Taylor
-
-Over far to many years, Mark has done a mix of development (particularly PHP),
-devops, database administration and technical architecture. He currently works
-for [DealTrak](https://www.dealtrak.co.uk/) as their Lead Architect.
+### Irene Sarigu
+Irene is a Senior Software Engineer, with experience in multiple sectors and different languages such as TS, Node, Scala and some PHP. She has a passion for learning all things tech (and not tech related) and enjoys travelling, playing chess and going to the seaside.
 
 ## Getting Involved
 
-If you would like to be involved in the organising of the event please get in
-touch via [twitter](http://twitter.com/leedsphp) or email
-[info@leedsphp.org](info@leedsphp.org).
+If you would like to be involved in speaking or sponsoring our events please get in
+touch via [twitter](http://twitter.com/leedsphp).
