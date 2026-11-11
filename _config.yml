@@ -1,5 +1,5 @@
 # Site settings
-title: LeedsPHP – A PHP user group in Leeds, UK.
+title: LeedsPHP - A PHP user group in Leeds, UK.
 description: "A minimal blog template, build with Jekyll."
 url: "http://www.jacoporabolini.com/emerald"
 author:
@@ -28,8 +28,34 @@ defaults:
     values:
       layout: "post"
 
-# Custom variables
-google_analytics: UA-70481443-1
-
 # Options
 reverse: false
+
+sponsors: 
+  - name: Acentrix
+    website: "https://acentrix.co.uk/"
+    logo: "acentrix_logo.png"
+    description: ""
+    current: true
+
+socials:
+  - name: LinkedIn
+    link: "https://www.linkedin.com/company/leedsphp"
+    imagePath: "linkedin.png"
+    footerImagePath: "linkedin-footer-logo.png"
+    contactUsHere: true
+  - name: Mastodon
+    link: "https://mastodon.social/@LeedsPHP@phpc.social"
+    imagePath: "mastodon.png"
+    footerImagePath: "mastodon-footer-logo.png"
+    contactUsHere: true
+  - name: Bluesky
+    link: "https://bsky.app/profile/leedsphp.bsky.social"
+    imagePath: "bluesky.png"
+    footerImagePath: "bluesky-footer-logo.png"
+    contactUsHere: true
+  - name: X
+    link: "https://x.com/leedsphp"
+    imagePath: "x.jpg"
+    footerImagePath: "x-footer-logo.png"
+    contactUsHere: true
