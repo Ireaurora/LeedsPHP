@@ -1,28 +1,4 @@
 /*- Custom style -*/
-ul.sponsor {
-    li {
-        display: inline-block;
-    }
-    a {
-        display: block;
-    }
-    img {
-        display: inline;
-        vertical-align: middle;
-        margin: 5px;
-        max-height: 50px;
-    }
-}
-.credits {
-    font-size: 0.8em;
-    margin-top: 10px;
-    a {
-        color: white;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
 button {
     border: none;
     padding: 0;
@@ -38,5 +14,28 @@ button {
             color: white;
             background-color: $main-color;
         }
+    }
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: $colour-blue-tint;
+}
+
+.logo{
+    height: 50px;
+
+    img {
+        height:100%;
+    }
+
+    @include for-tablet-portrait-up {
+        height: 75px;
     }
 }

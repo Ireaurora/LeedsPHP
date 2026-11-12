@@ -1,9 +1,19 @@
 ---
 layout: default
 ---
-<article id="page">
-    {% assign post = site.posts.first %}
-    {% assign content = post.content %}
-    <h2>★ The Next Event: <a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
-    {{ post.content }}
-</article>
+<div class="container">
+	<div class="home-container">
+		<div class="home-section">
+			<h1>Our meetups are now on <a href="https://luma.com/leedsphp">luma</a>!</h1>
+            <iframe class="luma-iframe"
+                src="https://luma.com/embed/calendar/cal-JZUj5zR6iB94LqH/events?lt=light"
+            ></iframe>
+		</div>
+		<div class="home-section">
+			<h1>About LeedsPHP</h1>
+			<p>LeedsPHP is an established non-profit user group set up as a community to share knowledge about PHP, Software Engineering, DevOps, Cloud Computing, Testing, Architecture, Leadership, Careers, Soft Skills.</p>
+			<p>We create a welcoming and diverse environment and we welcome speakers of any skill level and experience.</p>
+			<p>We meet on the third Wednesday of the month (usually) for nine meetups each year, with social events in July and December.</p>
+		</div>
+	</div>
+</div>
