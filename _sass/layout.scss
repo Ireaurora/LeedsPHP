@@ -1,161 +1,3 @@
-/* -- General Layout -- */
-
-/* Navigation */
-
-#nav, #nav-left {
-  a {
-    display: block;
-    color: $background-color;
-    padding: 0.33334em 0;
-    font-size: 1.5em;
-    font-weight: 400;
-    @media (min-width: 940px) {
-      font-size: 1em;
-    }
-    &:hover {
-      background-color: lighten($main-color, 5%);
-    }
-  }
-  span {
-      font-weight: 200;
-    }
-}
-
-#nav {
-  @include nav-position(right);
-}
-
-#nav-left {
-  @include nav-position(left);
-}
-
-/* Toggle class to open menu */
-
-#nav.menu-open {
-  @include open(-14rem);
-}
-
-#nav-left.menu-open-left {
-  @include open(14rem);
-}
-
-/* Separator after menu */
-
-#nav-list:after {
-  display: block;
-  content: '';
-  width: 5rem;
-  height: 1px;
-  margin: 23px auto;
-  background-color: $background-color;
-}
-
-/* Icon menu */
-
-#nav-menu {
-  @include icon-position(right);
-}
-
-#nav-menu-left {
-  @include icon-position(left);
-}
-
-#menu {
-  height: 4px;
-  width: 1.5em;
-  background-color: lighten($text-color, 35%);
-  margin-top: 8px;
-  &:after, &:before {
-    content: "";
-    display: block;
-    position: relative;
-    height: 4px;
-    width: 1.5em;
-    background-color: lighten($text-color, 35%);
-    transition: all 0.3s ease-in;
-  }
-  &:before {
-    top: -8px;
-  }
-  &:after {
-    top: 4px;
-  }
-  &.btn-close {
-    background: none;
-  }
-  &.btn-close:before {
-    top: 0;
-    transform: rotate(-45deg);
-    background-color: $background-color;
-  }
-  &.btn-close:after {
-    top: -4px;
-    transform: rotate(45deg);
-    background-color: $background-color;
-  }
-}
-
-/* Main content */
-
-.fixed {
-  position: fixed;
-  @media (min-width: 940px) {
-    position: static;
-  }
-}
-
-#container {
-	margin:0 auto;
-	max-width: 730px;
-	padding: 0 1.5rem;
-}
-
-#header {
-	text-align: center;
-  padding: 24px 0;
-  position: relative;
-  a {
-  	text-decoration: none;
-  	color: $text-color;
-  	display: inline-block;
-  }
-  img {
-  	max-height: 72px;
-  	margin: 0 auto;
-  	display: block;
-  }
-  h1 {
-  	font-family: 'Signika', sans-serif; //Emerald logo font
-    font-weight: 600;
-  }
-  &:after {
-  	display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: lighten($text-color, 70%);
-  }
-
-  .meetup {
-    color: #fff;
-    background-color: #f13a59;
-    padding: 15px;
-
-    & a {
-      color: #fff;
-      padding: 0 5px;
-      border: 1px solid #eca3b1;
-      border-radius: 4px;
-      transition: border 0.3s;
-
-      &:hover {
-        border-color: #FCCBD4;
-      }
-    }
-  }
-}
-
 /* Posts - list view (home page, archive) */
 
 #posts {
@@ -171,45 +13,197 @@
     }
 }
 
+.talk-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.talk-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: $colour-blue-dark;
+  font-weight: 600;
+}
+
+.talk-page-card {
+  overflow: hidden;
+  border: 1px solid rgba($colour-blue-dark, 0.1);
+  border-bottom: 4px solid $colour-blue-bright;
+  border-radius: 20px;
+  background-color: $colour-white;
+  box-shadow: 0 12px 32px rgba(16, 36, 70, 0.08);
+}
+
+.talk-page-heading {
+  padding: 28px 32px 24px;
+  border-bottom: 1px solid rgba($colour-blue-dark, 0.1);
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.talk-content {
+  padding: 28px 32px 36px;
+
+  > h2:first-child,
+  > h1 {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.55em;
+    border-bottom: 1px solid rgba($colour-blue-dark, 0.16);
+    color: $colour-blue-dark;
+    font-size: 1.25rem;
+  }
+
+  > h2:first-child {
+    margin-top: 0;
+  }
+
+  > h2:first-child + ul {
+    display: grid;
+    gap: 8px;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 10px 14px;
+      border-left: 3px solid $colour-blue-bright;
+      border-radius: 0 10px 10px 0;
+      background-color: $colour-blue-tint;
+      line-height: 1.5;
+    }
+  }
+
+  > h1 {
+    margin-top: 2rem;
+  }
+
+  blockquote {
+    margin: 1.25rem 0;
+    padding: 16px 20px;
+    border-left: 4px solid $colour-blue-bright;
+    border-radius: 0 12px 12px 0;
+    background-color: $colour-blue-tint;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin: 1.5rem 0;
+    border: 0;
+    background-color: rgba($colour-blue-dark, 0.16);
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  > h2:first-child + ul + hr {
+    display: none;
+  }
+
+  &.has-rsvp {
+    padding-bottom: 12px;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    margin: 0.25rem 0 1rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.65em 1em;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.talk-page-rsvp {
+  display: flex;
+  justify-content: center;
+  padding: 8px 32px 32px;
+}
+
+.meetup-rsvp-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65em 1em;
+  border-radius: 8px;
+  background-color: $colour-blue-dark;
+  color: $colour-white;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    background-color: darken($colour-blue-dark, 8%);
+    color: $colour-white;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $colour-blue-bright;
+    outline-offset: 3px;
+  }
+}
+
+@media (max-width: 640px) {
+  .talk-page {
+    padding: 24px 16px 32px;
+  }
+
+  .talk-page-heading {
+    padding: 22px 20px 18px;
+  }
+
+  .talk-content {
+    padding: 20px;
+
+    &.has-rsvp {
+      padding-bottom: 8px;
+    }
+  }
+
+  .talk-page-rsvp {
+    padding: 8px 20px 20px;
+  }
+
+}
+
 .post+.post:before {
     display: block;
     content: '';
     width: 5rem;
     height: 1px;
     margin: 23px auto;
-    background-color: lighten($text-color, 70%);
+    background-color: lighten($colour-black, 70%);
   }
 
 .by-line {
   display: block;
-  color: lighten($text-color, 25%);
+  color: lighten($colour-black, 25%);
   line-height: 1.5em; /* 24px/16px */
   margin-bottom: 1.5em; /* 24px/16px */
   font-weight: 200;
   @media (min-width: 940px) {
     display: block;
-    color: lighten($text-color, 25%);
+    color: lighten($colour-black, 25%);
     line-height: 1.3334em; /* 24px/18px */
     margin-bottom: 1.3334em; /* 24px/18px */
     font-weight: 200;
   }
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 24px;
-  border-radius: 4px;
-}
-
-img[title="Emerald"] {
-    box-shadow: 0 2px 6px #ddd;
-  }
-
-code {
-  color: lighten($text-color, 35%);
-  background-color: lighten($background-color, 35%);
 }
 
 /* Set the vertical rhythm (and padding-left) for lists inside post content */
@@ -231,30 +225,338 @@ code {
 /* Paginator */
 
 .pagination {
-  text-align: center;
-  margin: 2.666668em;
-  span {
-    background-color: darken($background-color, 5%);
-    color: $text-color;
+  display: flex;
+  justify-content: center;
+  margin: 2.666668em 0;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+
+  .page-number[aria-current="page"] {
+    background-color: darken($colour-blue-bright, 15%);
+    color: $colour-white;
+    font-weight: 700;
   }
-  a:hover {
-    background-color: lighten($main-color, 5%);
+
+  a:hover,
+  a:focus {
+    background-color: darken($colour-blue-dark, 8%);
+    color: $colour-white;
   }
 }
+
+.pagination-numbers {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+}
+
+.pagination-mobile {
+  display: none;
+}
+
+.pagination-ellipsis {
+  padding: 0 2px;
+  color: $colour-blue-dark;
+  font-weight: 600;
+}
+
+.page-control {
+  font-size: 1.15rem;
+}
+
+.page-item.is-disabled {
+  opacity: 0.45;
+}
+
+@media (max-width: 640px) {
+  .pagination-controls {
+    gap: 4px;
+  }
+
+  .pagination-desktop {
+    display: none;
+  }
+
+  .pagination-mobile {
+    display: flex;
+  }
+
+  .pagination-numbers {
+    gap: 4px;
+  }
+
+  .pagination .page-item {
+    box-sizing: border-box;
+    width: 36px;
+    min-width: 36px;
+    padding: 0;
+  }
+}
+
 .page-item {
-  background-color: $main-color;
-  color: $background-color;
-  padding: 4px 8px;
+  display: inline-flex;
+  min-width: 40px;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: $colour-blue-dark;
+  color: white;
   font-weight: 400;
-  padding: 0.5em 1em;
+  padding: 0 0.5em;
   border-radius: 4px;
 }
 
-/* Footer */
+/* Talks archive */
 
-footer {
-  background-color: $main-color;
-  color: $background-color;
-  text-align: center;
-  padding: 0.6667em 0;
+.archive-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
+}
+
+.archive-heading {
+  margin-bottom: 28px;
+}
+
+.archive-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.archive-page-count {
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid rgba($colour-blue-dark, 0.12);
+  border-radius: 999px;
+  background-color: $colour-white;
+  color: $colour-blue-dark;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.archive-intro {
+  margin: 12px 0 0;
+}
+
+.archive-post-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.archive-page #posts {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.archive-page .post {
+  padding: 22px 24px;
+  border: 1px solid rgba($colour-blue-dark, 0.1);
+  border-bottom: 4px solid $colour-blue-bright;
+  border-radius: 16px;
+  background-color: $colour-white;
+  box-shadow: 0 6px 18px rgba(16, 36, 70, 0.06);
+
+  & + .post:before {
+    display: none;
+  }
+
+  h2 {
+    margin-bottom: 0.55em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Homepage */
+.home-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include for-tablet-landscape-up {
+        padding: 20px 0;
+        gap: 36px;
+    }
+}
+
+.home-section {
+    border: 1px solid rgba($colour-blue-dark, 0.1);
+    border-bottom: 4px solid $colour-blue-bright;
+    margin: 0 auto;
+    box-shadow: 0 12px 32px rgba(16, 36, 70, 0.1);
+    border-radius: 24px;
+    background-color: $colour-white;
+
+    @include for-tablet-landscape-up {
+        width: 75%;
+    }
+}
+
+.home-section,
+.about-card {
+    padding: 20px;
+
+    @include for-tablet-landscape-up {
+        padding: 36px 40px;
+    }
+}
+
+.section-eyebrow {
+    margin-bottom: 0.4rem;
+    color: $colour-blue-dark;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.about-home-section {
+    display: grid;
+    gap: 24px;
+
+    @include for-tablet-landscape-up {
+        grid-template-columns: minmax(0, 1.3fr) minmax(220px, 0.7fr);
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+.about-home-lead {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.archive-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 0.5rem;
+    padding: 11px 16px;
+    border-radius: 10px;
+    background-color: $colour-blue-dark;
+    color: $colour-white;
+    font-weight: 600;
+    transition: background-color 150ms ease, transform 150ms ease;
+
+    &:hover,
+    &:focus-visible {
+        transform: translateY(-2px);
+        background-color: darken($colour-blue-dark, 8%);
+        color: $colour-white;
+    }
+}
+
+.about-home-topics {
+    padding: 22px;
+    border-left: 3px solid $colour-blue-bright;
+    border-radius: 0 16px 16px 0;
+    background-color: $colour-blue-tint;
+}
+
+.topics-heading {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding: 5px 10px;
+        border: 1px solid rgba($colour-blue-dark, 0.12);
+        border-radius: 999px;
+        background-color: $colour-white;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+.home-section > :last-child,
+.about-card > :last-child {
+    margin-bottom: 0;
+}
+
+/* Design choice */
+
+.container {
+    flex: 1 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 0;
+    background-color: $colour-blue-tint;
+    margin-top: 20px;
+    border-radius: 20px 20px 0 0;
+}
+
+.luma-iframe {
+    display: block;
+    border: 1px solid rgba($colour-blue-dark, 0.12);
+    border-radius: 14px;
+    width: 100%;
+    height: 320px;
+    background-color: $colour-white;
+}
+
+/* Navbar */
+
+.menu-items {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.menu-item {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 8px 2px;
+    color: $colour-blue-dark;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 150ms ease;
+
+    &:hover,
+    &:focus-visible {
+        color: darken($colour-blue-dark, 8%);
+    }
+
+    &:focus-visible {
+        outline: 3px solid $colour-blue-bright;
+        outline-offset: 3px;
+    }
+
+    &[aria-current="page"] {
+        color: $colour-blue-dark;
+        font-weight: 700;
+    }
+
+    @include for-tablet-portrait-up {
+        font-size: 18px;
+    }
 }

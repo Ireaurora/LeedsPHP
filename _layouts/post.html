@@ -1,12 +1,19 @@
 ---
 layout: default
 ---
-<article id="post-page">
-	<h2>{{ page.title }}</h2>
-	<!-- <time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">Posted: {{ page.date | date_to_string }}</time> -->
-	<div class="content">
-
-		{{ content }}
-
+<article id="post-page" class="talk-page">
+	<a class="talk-back-link" href="/archive/"><span aria-hidden="true">&larr;</span> All talks</a>
+	<div class="talk-page-card">
+		<div class="talk-page-heading">
+			<h1>{{ page.title }}</h1>
+		</div>
+		<div class="content talk-content{% if page.meetup_event_id %} has-rsvp{% endif %}">
+			{{ content }}
+		</div>
+		{% if page.meetup_event_id %}
+		<div class="talk-page-rsvp">
+			<a class="meetup-rsvp-button" href="https://www.meetup.com/leedsphp/events/{{ page.meetup_event_id }}/">RSVP on Meetup</a>
+		</div>
+		{% endif %}
 	</div>
 </article>
