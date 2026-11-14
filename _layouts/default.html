@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>{%if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<title>{{ site.title }} - {%if page.title %}{{ page.title }}{% endif %}</title>
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/css/main.css">
@@ -20,22 +20,12 @@
 <body>
 	<main>
 		<header>
-		<!-- Navigation -->
-		{% include nav.html %}
-
-		<!-- Icon menu -->
-		<a {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
-			<div id="menu"></div>
-		</a>
 		{% include header.html %}
 		</header>
-		{{ content }}
-		<!-- Footer -->
+		<div class="container"> 
+			{{ content }}
+		</div>
 		{% include footer.html %}
-
-		<!-- Script -->
-		{% include script.html %}
-
 	</main>
 </body>
 </html>

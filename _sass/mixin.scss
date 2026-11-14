@@ -1,53 +1,13 @@
 // -- Mixins -- //
-
-// Nav menu
-
-@mixin icon-position($position) {
-    display: block;
-    position: fixed;
-    top: 35px;
-    #{$position}: 25px;
-    z-index: 10;
-    height: 24px;
-}
-
-@mixin open($x) {
-    transform: translateX($x);
-    width: 100%;
-    @media (min-width: 940px) {
-        width: 30%;
-    }
-}
-
-@mixin nav-position($position) {
-    width: 14rem;
-    position: fixed;
-    background-color: $main-color;
-    top: 0;
-    bottom: 0;
-    #{$position}: -14rem;
-    color: $background-color;
-    opacity: 0.95;
-    transition: all 0.3s ease-in;
-    z-index: 1;
-    padding: 72px 0;
-    text-align: center;
-}
-
-
-// @mixin for-phone-only {
-//   @media (max-width: 599px) { @content; }
-// }
 @mixin for-tablet-portrait-up {
   @media (min-width: 600px) { @content; }
 }
+
 @mixin for-tablet-landscape-up {
   @media (min-width: 900px) { @content; }
 }
-// @mixin for-desktop-up {
-//   @media (min-width: 1200px) { @content; }
-// }
-// @mixin for-big-desktop-up {
-//   @media (min-width: 1800px) { @content; }
-// }
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
 
