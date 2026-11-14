@@ -2,21 +2,37 @@
 layout: default
 ---
 <div class="home-container">
-	<div class="home-section">
+	<section class="home-section meetup-section">
+		<p class="section-eyebrow">Join our community</p>
 		<h2>Next meet-up</h2>
-		<p>We usually meet on the third Wednesday of the month! Interested in joining our community? <br> Sign up to one of our next meet-ups on <a href="https://luma.com/leedsphp">luma</a>.</p>
-		<iframe 
+		<p>We usually meet on the third Wednesday of the month! Interested in joining our community? Sign up to one of our next meet-ups on <a href="https://luma.com/leedsphp">Luma</a>.</p>
+		<iframe
 			class="luma-iframe"
 			src="https://luma.com/embed/calendar/cal-JZUj5zR6iB94LqH/events?lt=light"
+			title="Upcoming LeedsPHP events"
+			loading="lazy"
 		></iframe>
-	</div>
-	<div class="home-section">
-		<h2>About LeedsPHP</h2>
-		<p>LeedsPHP is an established non-profit user group set up as a community to share knowledge about PHP, Software Engineering, DevOps, Cloud Computing, Testing, Architecture, Leadership, Careers, Soft Skills.</p>
-		<p>We create a welcoming and diverse environment and we welcome speakers of any skill level and experience.</p>
-
-		<h4>Talks Archive</h4>
-		<p>Our first event was more than 10 years ago! See past meet-ups in our <a href="/archive/">talks archive</a>.</p>
-	</div>
+	</section>
+	<section class="home-section about-home-section">
+		<div class="about-home-copy">
+			<p class="section-eyebrow">Who we are</p>
+			<h2>About LeedsPHP</h2>
+			<p class="about-home-lead">LeedsPHP is an established non-profit user group where our community shares knowledge and learns together.</p>
+			<p>We create a welcoming, diverse environment and welcome speakers at every skill and experience level.</p>
+			<a class="archive-cta" href="/archive/">Explore the talks archive <span aria-hidden="true">&rarr;</span></a>
+		</div>
+		<aside class="about-home-topics" aria-label="Topics explored at LeedsPHP">
+			<p class="topics-heading">What we explore</p>
+			<ul class="topic-list">
+				<li>PHP &amp; frameworks</li>
+				<li>Software engineering</li>
+				<li>DevOps &amp; cloud</li>
+				<li>Testing</li>
+				<li>Architecture</li>
+				<li>Leadership &amp; careers</li>
+				<li>Soft skills</li>
+			</ul>
+		</aside>
+	</section>
 </div>
 

@@ -19,11 +19,15 @@ footer {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 20px;
+   padding: 24px 20px;
 
    @include for-tablet-portrait-up {
       flex-direction: row;
       justify-content: space-around;
+   }
+
+   @include for-tablet-landscape-up {
+      padding: 36px 20px;
    }
 }
 
@@ -73,33 +77,34 @@ footer {
 
 .footer-bottom {
    border-top: 1px solid $colour-white;
-   padding: 15px;
+   padding: 24px 20px;
    margin-bottom: 0;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   gap: 10px;
+   gap: 20px;
 
-   @include for-tablet-portrait-up {
+   @include for-tablet-landscape-up {
       flex-direction: row;
       justify-content: space-between;
+      gap: 24px;
+      padding: 26px 20px;
    }
 }
 
 .social-links{
    display: flex;
-   gap: 20px;
-   padding-bottom: 5px;
+   gap: 18px;
    img {
-      display:flex;
-      height: 30px;
-      width: 30px;
+      display: block;
+      height: 34px;
+      width: 34px;
+      object-fit: contain;
    }
 
-   @include for-tablet-portrait-up {
+   @include for-tablet-landscape-up {
       gap: 10px;
-      padding-bottom: 0;
    }
 }
 
@@ -110,11 +115,18 @@ footer {
 }
 
 .thanks-container {
+   max-width: 34rem;
+   line-height: 1.5;
+
    p {
       margin: 0;
       color: $colour-white;
       font-size: 1em;
       font-weight: 400;
+   }
+
+   p + p {
+      margin-top: 0.5rem;
    }
 
    a {
@@ -125,8 +137,17 @@ footer {
 }
 
 .copyright {
+   width: 100%;
    margin: 0;
+   padding-top: 14px;
+   border-top: 1px solid rgba($colour-white, 0.25);
    color: $colour-white;
    font-size: 0.8em;
    font-weight: 400;
+
+   @include for-tablet-landscape-up {
+      width: auto;
+      padding-top: 0;
+      border-top: 0;
+   }
 }

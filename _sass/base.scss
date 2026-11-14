@@ -33,10 +33,10 @@ header {
 
 /*- Link -*/
 a {
-    color: $colour-blue-bright;
+    color: $colour-blue-dark;
     text-decoration: none;
 
     &:hover, &:focus {
-        color: $colour-blue-dark;
+        color: darken($colour-blue-dark, 8%);
     }
 }

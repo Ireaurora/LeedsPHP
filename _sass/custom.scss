@@ -13,7 +13,7 @@ button {
         background-color: $colour-blue-dark;
         &:hover {
             color: white;
-            background-color: $colour-blue-bright;
+            background-color: darken($colour-blue-dark, 8%);
         }
     }
 }
