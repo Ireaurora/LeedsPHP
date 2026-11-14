@@ -1,16 +1,29 @@
 ---
 layout: default
-title: Talk Archive
+title: Talks Archive
 ---
-<!-- Posts -->
-<ul id="posts">
-	{% for post in paginator.posts %}
-	<li class="post">
-		<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
-		<!-- <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">Posted: {{ post.date | date_to_string }}</time> -->
-		<p>{{ post.content | strip_html | truncatewords:50 }}</p>
-	</li>
-    {% endfor %}
-</ul>
 
-  {% include pagination.html %}
+<div class="archive-page">
+	<div class="archive-heading">
+		<div class="archive-title-row">
+			<h1>Talks Archive</h1>
+			<p class="archive-page-count">Page {{ paginator.page }} of {{ paginator.total_pages }}</p>
+		</div>
+	</div>
+
+	<ul id="posts">
+		{% for post in paginator.posts %}
+		<li class="post">
+			{% assign post_url = post.url %}
+			{% if site.baseurl != "/" %}
+				{% assign post_url = post.url | prepend: site.baseurl %}
+			{% endif %}
+			<h2><a href="{{ post_url }}">{{ post.title }}</a></h2>
+			<!-- <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">Posted: {{ post.date | date_to_string }}</time> -->
+			<p>{{ post.content | strip_html | truncatewords:50 }} <a class="archive-post-link" href="{{ post_url }}">View talk <span aria-hidden="true">&rarr;</span></a></p>
+		</li>
+		{% endfor %}
+	</ul>
+
+	{% include pagination.html %}
+</div>

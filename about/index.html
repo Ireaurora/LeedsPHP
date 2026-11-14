@@ -1,0 +1,59 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+<div class="about-container">
+    <div class="card-container">
+        <div class="about-card talks-section">
+            <h2>Talks &amp; speakers</h2>
+            <p>If you have a suggestion for a talk or would like to do a talk then please get in touch by sending us a message here: </p>
+            <div class="contact-social-links">
+                {% for social in site.socials %}
+                    {% if social.contactUsHere == true %}
+                        <a class="contact-social-link" href="{{social.link}}" target="_blank" rel="noopener noreferrer" aria-label="Contact LeedsPHP on {{social.name}}">
+                            <img src="/img/socials/{{social.imagePath}}" alt="">
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <p>Talks can be on any subject you like. A long talk, a short talk, a lightning talk; we'll try to accommodate whatever you're comfortable with.</p>
+            <p>Here's some of the topics for talks:</p>
+            <ul class="talk-topics-list">
+                <li>PHP and frameworks</li>
+                <li>DevOps, Architecture and Cloud Computing</li>
+                <li>Career Progression & Soft Skills</li>
+                <li>Anything that would benefit the community</li>
+            </ul>
+        </div>
+
+        <div class="about-card conduct-section">
+            <h2>Code of Conduct</h2>
+            <p>LeedsPHP is dedicated to providing harassment-free meet-up experiences for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. </p>
+            <p>We do not tolerate harassment of participants in any form. Sexual language and imagery is not appropriate for any meet-up venue or online discussion.</p>
+            <p>LeedsPHP members violating these rules may be sanctioned or expelled from the group at the discretion of the group's organisers.</p>
+        </div>
+
+        <div class="about-card sponsorship-section">
+            <h2>Sponsorship</h2>
+            <p>If you would like to provide further sponsorship, long term, or for a particular events get in touch via <a href="https://www.linkedin.com/company/leedsphp" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+
+            <h3>Why Sponsor Us</h3>
+            <p>LeedsPHP has the main aim is to provide training to our community by sharing knowledge.</p>
+            <p>Community events such as LeedsPHP, embrace the spirit of sharing thoughts and ideas synonymous with the Open Source movement; a movement that's at the heart of developers.</p>
+            <p>By sponsoring LeedsPHP, your company gets to the heart of our community and is highlighted as a company who cares about supporting and growing it.</p>
+        </div>
+
+        <div class="about-card organisers-section">
+            <h2>Our Venue</h2>
+            <p>Our current venue is <a href="https://enablis.co">Enablis</a></p>
+            <p><a href="https://www.google.com/maps/place/1st+Floor,+Aintree+House,+1+York+Pl,+Leeds+LS1+2DR">Location</a>: 1st Floor, 1 York Place, Leeds, LS1 2DR</p>
+
+            <h3>Our Organiser</h3>
+            <p><a href="https://linkedin.com/in/irene-sarigu" target="_blank" rel="noopener noreferrer">Irene Sarigu</a> is a polyglot Senior Software Engineer, with experience in multiple sectors.</p>
+            <p>She has a passion for learning all things tech (and not tech related) and enjoys travelling, playing chess, completing jigsaws and going to the seaside.</p>
+        </div>
+    </div>
+</div>
+
+

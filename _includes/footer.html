@@ -1,16 +1,38 @@
 <footer>
-    <h3>Sponsors</h3>
-    <ul class="sponsor">
-        <li class="sponsor-estrato">
-            <a href="https://estrato.co.uk"><img src="/img/estrato_logo.svg" alt="Estrato logo" /></a>
-        </li>
-        <li class="sponsor-boh">
-            <a href="https://www.bigorangeheart.org"><img src="/img/Big-Orange-Heart_UA.svg" alt="Big Orange Heart logo" /></a>
-        </li>
-        <li class="sponsor-autoprotect">
-            <a href="https://www.autoprotect.co.uk"><img src="/img/autoprotect_logo.jpg" alt="Autoprotect logo" /></a>
-        </li>
-    </ul>
-    <div class="credits"><a href="http://www.leedsowltrail.com/">Why the owl?</a></div>
-    <div class="credits">Built with Jekyll and <a href="https://github.com/deadlyhifi/LeedsPHP/tree/gh-pages">Github pages</a> using an edited <a href="https://github.com/KingFelix/emerald">Emerald theme</a></div>
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="sponsors-container">
+                <p> Our Sponsors: </p>
+                <div class="sponsor-images">
+                    {% for sponsor in site.sponsors  %}
+                        <a href="{{sponsor.website}}" target="_blank" rel="noopener noreferrer">
+                            <img src="/img/{{sponsor.logo}}" alt="{{sponsor.name}}">
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+             {% for social in site.socials  %}
+                <a href="{{social.link}}" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/socials/{{social.footerImagePath}}" alt="{{social.name}}">
+                </a>
+            {% endfor %}
+            </div>
+            <div class="thanks-container">
+                <p>Thanks to
+                        <a href="https://linkedin.com/in/irene-sarigu" target="_blank" rel="noopener noreferrer">Irene Sarigu</a> &amp;
+                        <a href="https://linkedin.com/in/dean-flint/" target="_blank" rel="noopener noreferrer">Dean Flint</a>
+                    for the website.</p>
+                <p>Built with Jekyll and <a href="https://github.com/deadlyhifi/LeedsPHP/tree/gh-pages">Github pages</a> using an edited <a href="https://github.com/KingFelix/emerald">Emerald theme</a></p>
+            </div>
+            <p class="copyright">
+                LeedsPHP © 2026
+            </p>
+        </div>
+    </div>
 </footer>
+
+

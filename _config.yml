@@ -1,11 +1,16 @@
 # Site settings
-title: LeedsPHP – A PHP user group in Leeds, UK.
-description: "A minimal blog template, build with Jekyll."
-url: "http://www.jacoporabolini.com/emerald"
+title: LeedsPHP
+description: A meet-up for technologists, with a focus on PHP, in Leeds, UK
+about: LeedsPHP is an established non-profit user group set up as a community to share knowledge about PHP, Software Engineering, DevOps, Cloud Computing, Testing, Architecture, Leadership, Careers, Soft Skills.
+url: "https://leedsphp.org/"
 author:
-  name: "Jacopo Rabolini"
-  email: "hello@jacoporabolini.com"
-  url: "http://www.jacoporabolini.com"
+  - name: "Jacopo Rabolini"
+    email: "hello@jacoporabolini.com"
+    url: "http://www.jacoporabolini.com"
+  - name: "Irene Sarigu"
+    url: "https://linkedin.com/in/irene-sarigu"
+  - name: "Dean Flint"
+    url: "https://linkedin.com/in/dean-flint/"
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
@@ -16,20 +21,42 @@ permalink: /:title/
 
 # Pagination
 gems: [jekyll-paginate]
-paginate: 8
+paginate: 5
 paginate_path: "/archive/page/:num"
 
 # Default values
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
 
-# Custom variables
-google_analytics: UA-70481443-1
+sponsors: 
+  - name: Acentrix
+    website: "https://acentrix.co.uk/"
+    logo: "acentrix_logo.png"
+    description: ""
+    current: true
 
-# Options
-reverse: false
+socials:
+  - name: LinkedIn
+    link: "https://www.linkedin.com/company/leedsphp"
+    imagePath: "linkedin.png"
+    footerImagePath: "linkedin-footer-logo.png"
+    contactUsHere: true
+  - name: Mastodon
+    link: "https://mastodon.social/@LeedsPHP@phpc.social"
+    imagePath: "mastodon.png"
+    footerImagePath: "mastodon-footer-logo.png"
+    contactUsHere: true
+  - name: Bluesky
+    link: "https://bsky.app/profile/leedsphp.bsky.social"
+    imagePath: "bluesky.png"
+    footerImagePath: "bluesky-footer-logo.png"
+    contactUsHere: false
+  - name: X
+    link: "https://x.com/leedsphp"
+    imagePath: "x.jpg"
+    footerImagePath: "x-footer-logo.png"
+    contactUsHere: false

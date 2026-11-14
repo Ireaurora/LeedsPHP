@@ -1,0 +1,153 @@
+
+footer {
+   text-align: center;
+   background-color: $colour-blue-dark;
+}
+
+.footer-container {
+   font-weight: 500;
+   min-height: 10vh;
+   max-width: 1200px;
+   background-color: $colour-blue-dark;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+}
+
+.footer-top {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 24px 20px;
+
+   @include for-tablet-portrait-up {
+      flex-direction: row;
+      justify-content: space-around;
+   }
+
+   @include for-tablet-landscape-up {
+      padding: 36px 20px;
+   }
+}
+
+.sponsors-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   p {
+      color: $colour-white;
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: 500;
+      padding-bottom: 10px;
+   }
+
+   @include for-tablet-portrait-up {
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      p {
+         padding-bottom: 0;
+      }
+   }
+
+   .sponsor-images {
+      display:flex;
+      justify-content: center;
+      flex-direction: row;
+      gap: 20px;
+
+      img {
+         display:flex;
+         height:35px;
+         width: 100px;
+      }
+
+      @include for-tablet-portrait-up {
+         img {
+            height:30px;
+            width: 100px;
+         }
+      }
+   }
+}
+
+.footer-bottom {
+   border-top: 1px solid $colour-white;
+   padding: 24px 20px;
+   margin-bottom: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+
+   @include for-tablet-landscape-up {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 26px 20px;
+   }
+}
+
+.social-links{
+   display: flex;
+   gap: 18px;
+   img {
+      display: block;
+      height: 34px;
+      width: 34px;
+      object-fit: contain;
+   }
+
+   @include for-tablet-landscape-up {
+      gap: 10px;
+   }
+}
+
+.center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.thanks-container {
+   max-width: 34rem;
+   line-height: 1.5;
+
+   p {
+      margin: 0;
+      color: $colour-white;
+      font-size: 1em;
+      font-weight: 400;
+   }
+
+   p + p {
+      margin-top: 0.5rem;
+   }
+
+   a {
+      color: $colour-white;
+      text-decoration: none;
+      font-weight: 500;
+   }
+}
+
+.copyright {
+   width: 100%;
+   margin: 0;
+   padding-top: 14px;
+   border-top: 1px solid rgba($colour-white, 0.25);
+   color: $colour-white;
+   font-size: 0.8em;
+   font-weight: 400;
+
+   @include for-tablet-landscape-up {
+      width: auto;
+      padding-top: 0;
+      border-top: 0;
+   }
+}

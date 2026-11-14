@@ -1,26 +1,87 @@
-<!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
-{% if paginator.previous_page%}
-	<a href="{{ paginator.previous_page_path }}" class="page-item">&laquo;</a>
-{% else %}
-	<span class="page-item">&laquo;</span>
-{% endif %}
-
-{% for page in (1..paginator.total_pages) %}
-	{% if page == paginator.page %}
-	<span class="page-item">{{ page }}</span>
-	{% elsif page == 1 %}
-	<a href="{{ paginator.previous_page_path }}" class="page-item">{{ page }}</a>
-	{% else %}
-	<a href="{{ site.paginate_path | replace: ':num', page }}" class="page-item">{{ page }}</a>
+	{% assign first_page_path = site.paginate_path | split: '/page/' | first | append: '/' %}
+	{% assign last_window_start = paginator.total_pages | minus: 2 %}
+	{% assign last_page_before = paginator.total_pages | minus: 1 %}
+	{% assign window_start = paginator.page | minus: 1 %}
+	{% assign window_end = paginator.page | plus: 1 %}
+	{% assign mobile_window_start = paginator.page | minus: 1 %}
+	{% assign mobile_window_end = paginator.page | plus: 1 %}
+	{% if paginator.total_pages <= 5 %}
+		{% assign window_start = 1 %}
+		{% assign window_end = paginator.total_pages %}
+	{% elsif paginator.page <= 2 %}
+		{% assign window_start = 1 %}
+		{% assign window_end = 3 %}
+	{% elsif paginator.page >= last_window_start %}
+		{% assign window_start = last_window_start %}
+		{% assign window_end = paginator.total_pages %}
 	{% endif %}
-{% endfor %}
+	{% if paginator.total_pages <= 3 %}
+		{% assign mobile_window_start = 1 %}
+		{% assign mobile_window_end = paginator.total_pages %}
+	{% elsif paginator.page <= 2 %}
+		{% assign mobile_window_start = 1 %}
+		{% assign mobile_window_end = 3 %}
+	{% elsif paginator.page >= last_page_before %}
+		{% assign mobile_window_start = paginator.total_pages | minus: 2 %}
+		{% assign mobile_window_end = paginator.total_pages %}
+	{% endif %}
 
-{% if paginator.next_page %}
-	<a href="{{ paginator.next_page_path }}" class="page-item">&raquo;</a>
-{% else %}
-	<span class="page-item">&raquo;</span>
-{% endif %}
-</div>
+	<nav class="pagination" aria-label="Talk archive pages">
+		<div class="pagination-controls">
+			{% if paginator.previous_page %}
+				<a href="{{ first_page_path }}" class="page-item page-control page-first" aria-label="First page" title="First page">&laquo;</a>
+				<a href="{{ paginator.previous_page_path }}" class="page-item page-control page-previous" aria-label="Previous page" title="Previous page">&lsaquo;</a>
+			{% else %}
+				<span class="page-item page-control page-first is-disabled" aria-disabled="true" aria-label="First page">&laquo;</span>
+				<span class="page-item page-control page-previous is-disabled" aria-disabled="true" aria-label="Previous page">&lsaquo;</span>
+			{% endif %}
+
+			<div class="pagination-numbers pagination-desktop">
+				{% if window_start > 1 %}
+					<a href="{{ first_page_path }}" class="page-item page-number">1</a>
+					{% if window_start > 2 or paginator.page == 3 %}
+						<span class="pagination-ellipsis" aria-hidden="true">&hellip;</span>
+					{% endif %}
+				{% endif %}
+
+				{% for page_number in (window_start..window_end) %}
+					{% if page_number == paginator.page %}
+						<span class="page-item page-number" aria-current="page">{{ page_number }}</span>
+					{% elsif page_number == 1 %}
+						<a href="{{ first_page_path }}" class="page-item page-number">{{ page_number }}</a>
+					{% else %}
+						<a href="{{ site.paginate_path | replace: ':num', page_number }}" class="page-item page-number">{{ page_number }}</a>
+					{% endif %}
+				{% endfor %}
+
+				{% if window_end < paginator.total_pages %}
+					{% if window_end < last_page_before %}
+						<span class="pagination-ellipsis" aria-hidden="true">&hellip;</span>
+					{% endif %}
+					<a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}" class="page-item page-number">{{ paginator.total_pages }}</a>
+				{% endif %}
+			</div>
+
+			<div class="pagination-numbers pagination-mobile">
+				{% for page_number in (mobile_window_start..mobile_window_end) %}
+					{% if page_number == paginator.page %}
+						<span class="page-item page-number" aria-current="page">{{ page_number }}</span>
+					{% elsif page_number == 1 %}
+						<a href="{{ first_page_path }}" class="page-item page-number">{{ page_number }}</a>
+					{% else %}
+						<a href="{{ site.paginate_path | replace: ':num', page_number }}" class="page-item page-number">{{ page_number }}</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+
+			{% if paginator.next_page %}
+				<a href="{{ paginator.next_page_path }}" class="page-item page-control page-next" aria-label="Next page" title="Next page">&rsaquo;</a>
+				<a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}" class="page-item page-control page-last" aria-label="Last page" title="Last page">&raquo;</a>
+			{% else %}
+				<span class="page-item page-control page-next is-disabled" aria-disabled="true" aria-label="Next page">&rsaquo;</span>
+				<span class="page-item page-control page-last is-disabled" aria-disabled="true" aria-label="Last page">&raquo;</span>
+			{% endif %}
+		</div>
+	</nav>
 {% endif %}
