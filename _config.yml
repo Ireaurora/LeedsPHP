@@ -21,7 +21,7 @@ permalink: /:title/
 
 # Pagination
 gems: [jekyll-paginate]
-paginate: 6
+paginate: 5
 paginate_path: "/archive/page/:num"
 
 # Default values

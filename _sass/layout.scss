@@ -56,24 +56,166 @@
 /* Paginator */
 
 .pagination {
-  text-align: center;
-  margin: 2.666668em;
-  span {
-    background-color: darken($colour-blue-bright, 5%);
-    color: $colour-black;
+  display: flex;
+  justify-content: center;
+  margin: 2.666668em 0;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+
+  .page-number[aria-current="page"] {
+    background-color: darken($colour-blue-bright, 15%);
+    color: $colour-white;
+    font-weight: 700;
   }
-  a:hover {
+
+  a:hover,
+  a:focus {
     background-color: darken($colour-blue-dark, 8%);
     color: $colour-white;
   }
 }
+
+.pagination-numbers {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+}
+
+.pagination-mobile {
+  display: none;
+}
+
+.pagination-ellipsis {
+  padding: 0 2px;
+  color: $colour-blue-dark;
+  font-weight: 600;
+}
+
+.page-control {
+  font-size: 1.15rem;
+}
+
+.page-item.is-disabled {
+  opacity: 0.45;
+}
+
+@media (max-width: 640px) {
+  .pagination-controls {
+    gap: 4px;
+  }
+
+  .pagination-desktop {
+    display: none;
+  }
+
+  .pagination-mobile {
+    display: flex;
+  }
+
+  .pagination-numbers {
+    gap: 4px;
+  }
+
+  .pagination .page-item {
+    box-sizing: border-box;
+    width: 36px;
+    min-width: 36px;
+    padding: 0;
+  }
+}
+
 .page-item {
+  display: inline-flex;
+  min-width: 40px;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
   background-color: $colour-blue-dark;
   color: white;
-  padding: 4px 8px;
   font-weight: 400;
-  padding: 0.5em 1em;
+  padding: 0 0.5em;
   border-radius: 4px;
+}
+
+/* Talks archive */
+
+.archive-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
+}
+
+.archive-heading {
+  margin-bottom: 28px;
+}
+
+.archive-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.archive-page-count {
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid rgba($colour-blue-dark, 0.12);
+  border-radius: 999px;
+  background-color: $colour-white;
+  color: $colour-blue-dark;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.archive-intro {
+  margin: 12px 0 0;
+}
+
+.archive-post-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.archive-page #posts {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.archive-page .post {
+  padding: 22px 24px;
+  border: 1px solid rgba($colour-blue-dark, 0.1);
+  border-bottom: 4px solid $colour-blue-bright;
+  border-radius: 16px;
+  background-color: $colour-white;
+  box-shadow: 0 6px 18px rgba(16, 36, 70, 0.06);
+
+  & + .post:before {
+    display: none;
+  }
+
+  h2 {
+    margin-bottom: 0.55em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /* Homepage */
