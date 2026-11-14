@@ -13,6 +13,175 @@
     }
 }
 
+.talk-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.talk-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: $colour-blue-dark;
+  font-weight: 600;
+}
+
+.talk-page-card {
+  overflow: hidden;
+  border: 1px solid rgba($colour-blue-dark, 0.1);
+  border-bottom: 4px solid $colour-blue-bright;
+  border-radius: 20px;
+  background-color: $colour-white;
+  box-shadow: 0 12px 32px rgba(16, 36, 70, 0.08);
+}
+
+.talk-page-heading {
+  padding: 28px 32px 24px;
+  border-bottom: 1px solid rgba($colour-blue-dark, 0.1);
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.talk-content {
+  padding: 28px 32px 36px;
+
+  > h2:first-child,
+  > h1 {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.55em;
+    border-bottom: 1px solid rgba($colour-blue-dark, 0.16);
+    color: $colour-blue-dark;
+    font-size: 1.25rem;
+  }
+
+  > h2:first-child {
+    margin-top: 0;
+  }
+
+  > h2:first-child + ul {
+    display: grid;
+    gap: 8px;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 10px 14px;
+      border-left: 3px solid $colour-blue-bright;
+      border-radius: 0 10px 10px 0;
+      background-color: $colour-blue-tint;
+      line-height: 1.5;
+    }
+  }
+
+  > h1 {
+    margin-top: 2rem;
+  }
+
+  blockquote {
+    margin: 1.25rem 0;
+    padding: 16px 20px;
+    border-left: 4px solid $colour-blue-bright;
+    border-radius: 0 12px 12px 0;
+    background-color: $colour-blue-tint;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin: 1.5rem 0;
+    border: 0;
+    background-color: rgba($colour-blue-dark, 0.16);
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  > h2:first-child + ul + hr {
+    display: none;
+  }
+
+  &.has-rsvp {
+    padding-bottom: 12px;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    margin: 0.25rem 0 1rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.65em 1em;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.talk-page-rsvp {
+  display: flex;
+  justify-content: center;
+  padding: 8px 32px 32px;
+}
+
+.meetup-rsvp-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65em 1em;
+  border-radius: 8px;
+  background-color: $colour-blue-dark;
+  color: $colour-white;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    background-color: darken($colour-blue-dark, 8%);
+    color: $colour-white;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $colour-blue-bright;
+    outline-offset: 3px;
+  }
+}
+
+@media (max-width: 640px) {
+  .talk-page {
+    padding: 24px 16px 32px;
+  }
+
+  .talk-page-heading {
+    padding: 22px 20px 18px;
+  }
+
+  .talk-content {
+    padding: 20px;
+
+    &.has-rsvp {
+      padding-bottom: 8px;
+    }
+  }
+
+  .talk-page-rsvp {
+    padding: 8px 20px 20px;
+  }
+
+}
+
 .post+.post:before {
     display: block;
     content: '';
